@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #030712;
+  --card-bg: #111827;
+  --primary-color: #2563EB;
+  --secondary-color: #7C3AED;
+  --text-main: #FFFFFF;
+  --text-sub: #9CA3AF;
+  --neon-glow: rgba(37, 99, 235, 0.5);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 20px var(--neon-glow);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-main), var(--text-sub));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
